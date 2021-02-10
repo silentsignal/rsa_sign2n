@@ -51,6 +51,11 @@ def forge_mac(jwt0, public_key):
 jwt0=sys.argv[1]
 jwt1=sys.argv[2]
 
+alg0=json.loads(b64urldecode(jwt0.split('.')[0]))
+alg1=json.loads(b64urldecode(jwt1.split('.')[0]))
+
+if not alg0["alg"].startswith("RS") or not alg1["alg"].startswith("RS"):
+    raise Exception("Not RSA signed tokens!")
 
 jwt0_sig_bytes = b64urldecode(jwt0.split('.')[2])
 jwt1_sig_bytes = b64urldecode(jwt1.split('.')[2])

@@ -3,6 +3,7 @@ bitstruct==8.11.1
 cffi==1.14.4
 cryptography==3.3.1
 diskcache==5.2.1
+gmpy2==2.1.2
 prompt-toolkit==3.0.14
 pycparser==2.20
 pycrypto==2.6.1

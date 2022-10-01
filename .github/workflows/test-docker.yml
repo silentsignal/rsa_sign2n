@@ -29,5 +29,5 @@ jobs:
 
     - name: Run test with CVE-2017-11424
       run: |
-        docker run rsa_sig2n python3 jwt_forgery.py `cat  ../CVE-2017-11424/test_jwt/RS256/jwt0` `cat  ../CVE-2017-11424/test_jwt/RS256/jwt1` | egrep '^eyJ' | tee CVE-2017-11424.tokens
+        docker run rsa_sig2n python3 jwt_forgery.py `cat  ./CVE-2017-11424/test_jwt/RS256/jwt0` `cat  ./CVE-2017-11424/test_jwt/RS256/jwt1` | egrep '^eyJ' | tee CVE-2017-11424.tokens
         ./test_scripts/test_CVE-2017-11424.sh CVE-2017-11424.tokens

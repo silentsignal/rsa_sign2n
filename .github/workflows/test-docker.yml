@@ -1,0 +1,33 @@
+name: Test with Docker build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "release" ]
+  pull_request:
+    branches: [ "release" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+        matrix:
+            python-version: ["3.8"]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build the Docker image
+      run: "cd standalone && docker build . --file Dockerfile --tag rsa_sig2n:latest && cd .."
+
+    - name: Install Python dependencies for CVE-2017-11424
+      run: |
+        python -m pip install --upgrade pip
+        pip install PyJWT==1.5.0
+
+    - name: Run test with CVE-2017-11424
+      run: |
+        docker run rsa_sig2n python3 jwt_forgery.py `cat  ./CVE-2017-11424/test_jwt/RS256/jwt0` `cat  ./CVE-2017-11424/test_jwt/RS256/jwt1` | egrep '^eyJ' | tee CVE-2017-11424.tokens
+        ./test_scripts/test_CVE-2017-11424.sh CVE-2017-11424.tokens

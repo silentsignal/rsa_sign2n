@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag rsa_sig2n:$(date +%s)
+      run: cd standalone; docker build . --file Dockerfile --tag rsa_sig2n:$(date +%s)

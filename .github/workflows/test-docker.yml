@@ -25,6 +25,7 @@ jobs:
     - name: Install Python dependencies for CVE-2017-11424
       run: |
         python -m pip install --upgrade pip
+        pip install wheel
         pip install -r CVE-2017-11424/requirements.txt
 
     - name: Run test with CVE-2017-11424

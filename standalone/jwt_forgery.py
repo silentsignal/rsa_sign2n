@@ -4,7 +4,7 @@ import base64
 from gmpy2 import mpz,gcd,c_div
 import binascii
 from Crypto.Hash import SHA256, SHA384, SHA512
-from Crypto.Signature import PKCS1_v1_5 # god bless http://ratmirkarabut.com/articles/ctf-writeup-google-ctf-quals-2017-rsa-ctf-challenge/
+from Crypto.Signature import pkcs1_15 # god bless http://ratmirkarabut.com/articles/ctf-writeup-google-ctf-quals-2017-rsa-ctf-challenge/
 import asn1tools
 import binascii
 import time
@@ -76,11 +76,11 @@ jwt1_sig = bytes2mpz(jwt1_sig_bytes)
 
 jks0_input = ".".join(jwt0.split('.')[0:2])
 hash_0=HASH.new(jks0_input.encode('ascii'))
-padded0 = PKCS1_v1_5.EMSA_PKCS1_V1_5_ENCODE(hash_0, len(jwt0_sig_bytes))
+padded0 = pkcs1_15._EMSA_PKCS1_V1_5_ENCODE(hash_0, len(jwt0_sig_bytes))
 
 jks1_input = ".".join(jwt1.split('.')[0:2])
 hash_1=HASH.new(jks1_input.encode('ascii'))
-padded1 = PKCS1_v1_5.EMSA_PKCS1_V1_5_ENCODE(hash_1, len(jwt0_sig_bytes))
+padded1 = pkcs1_15._EMSA_PKCS1_V1_5_ENCODE(hash_1, len(jwt0_sig_bytes))
 
 m0 = bytes2mpz(padded0) 
 m1 = bytes2mpz(padded1)

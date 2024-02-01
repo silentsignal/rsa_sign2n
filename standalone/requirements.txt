@@ -6,7 +6,7 @@ diskcache==5.2.1
 gmpy2==2.1.2
 prompt-toolkit==3.0.14
 pycparser==2.20
-pycrypto==2.6.1
+pycryptodome==3.20.0
 pyparsing==2.4.7
 six==1.15.0
 wcwidth==0.2.5

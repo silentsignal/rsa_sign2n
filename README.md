@@ -10,3 +10,5 @@ The repository contains:
 Additional reading: [Abusing JWT Public Keys Without the Public Key](https://blog.silentsignal.eu/2021/02/08/abusing-jwt-public-keys-without-the-public-key/)
 
 __You probably want to use the Docker image provided in the _standalone_ directory.__
+
+__If you prefer not to use Docker, this repository has been adapted to work with uv. Find it under standalone_uv.__

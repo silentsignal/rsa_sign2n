@@ -1,7 +1,7 @@
 services:
   forger:
     build: .
-    image: jwt-forgery:latest
+    image: sig2n:latest
     volumes:
       - .:/app
     stdin_open: true

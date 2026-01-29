@@ -1,0 +1,8 @@
+services:
+  forger:
+    build: .
+    image: jwt-forgery:latest
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

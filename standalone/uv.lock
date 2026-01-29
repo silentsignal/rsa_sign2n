@@ -1,0 +1,164 @@
+version = 1
+revision = 3
+requires-python = ">=3.11"
+
+[[package]]
+name = "asn1tools"
+version = "0.155.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "bitstruct" },
+    { name = "diskcache" },
+    { name = "prompt-toolkit" },
+    { name = "pyparsing" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b8/d3/1d891fd3fc24b506c95bc835819d18ad6a7107a14528a1d8a5be670455f4/asn1tools-0.155.3.tar.gz", hash = "sha256:e3c0e5d6a439eca829bf4ab61b5c6a1556d0966ba8de5766b0723f84797c332c", size = 839556, upload-time = "2021-01-14T17:07:58.307Z" }
+
+[[package]]
+name = "bitstruct"
+version = "8.11.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/95/33/9f094b5e32bc0927acf282199d35c384092dd73505c88fadb69292106eaf/bitstruct-8.11.1.tar.gz", hash = "sha256:4e7b8769c0f09fee403d0a5f637f8b575b191a79a92e140811aa109ce7461f0c", size = 34140, upload-time = "2020-11-19T09:30:04.021Z" }
+
+[[package]]
+name = "cffi"
+version = "1.14.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pycparser" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/6a/98e023b3d11537a5521902ac6b50db470c826c682be6a8c661549cb7717a/cffi-1.14.4.tar.gz", hash = "sha256:1a465cbe98a7fd391d47dce4b8f7e5b921e6cd805ef421d04f5f66ba8f06086c", size = 471302, upload-time = "2020-11-24T14:15:25.986Z" }
+
+[[package]]
+name = "cryptography"
+version = "3.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cffi" },
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b7/82/f7a4ddc1af185936c1e4fa000942ffa8fb2d98cff26b75afa7b3c63391c4/cryptography-3.3.1.tar.gz", hash = "sha256:7e177e4bea2de937a584b13645cab32f25e3d96fc0bc4a4cf99c27dc77682be6", size = 539756, upload-time = "2020-12-10T02:17:45.857Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f8/e9/d54b30ac24b4a372b65a9cdb1ea977f34eb2cea0c3f26fd6aacebb3a03b1/cryptography-3.3.1-cp36-abi3-macosx_10_10_x86_64.whl", hash = "sha256:dc42f645f8f3a489c3dd416730a514e7a91a59510ddaadc09d04224c098d3302", size = 1806124, upload-time = "2020-12-10T02:20:21.371Z" },
+    { url = "https://files.pythonhosted.org/packages/7c/b6/1f3dd48a22fcd56f19e6cfa95f74ff0a64b046306354e1bd2b936b7c9ab4/cryptography-3.3.1-cp36-abi3-manylinux1_x86_64.whl", hash = "sha256:788a3c9942df5e4371c199d10383f44a105d67d401fb4304178020142f020244", size = 2655338, upload-time = "2020-12-10T02:20:23.04Z" },
+    { url = "https://files.pythonhosted.org/packages/c9/de/7054df0620b5411ba45480f0261e1fb66a53f3db31b28e3aa52c026e72d9/cryptography-3.3.1-cp36-abi3-manylinux2010_x86_64.whl", hash = "sha256:69e836c9e5ff4373ce6d3ab311c1a2eed274793083858d3cd4c7d12ce20d5f9c", size = 2617057, upload-time = "2020-12-10T02:20:24.912Z" },
+    { url = "https://files.pythonhosted.org/packages/98/4d/2a235f7bf7946c09ba9d5e81ee1e5cfcbbcd174bc3e47a7174e342254e2a/cryptography-3.3.1-cp36-abi3-manylinux2014_aarch64.whl", hash = "sha256:9e21301f7a1e7c03dbea73e8602905a4ebba641547a462b26dd03451e5769e7c", size = 2596491, upload-time = "2020-12-10T02:30:13.237Z" },
+    { url = "https://files.pythonhosted.org/packages/f1/66/bb7c753c709e9bf5104c4b5e2e7b3bec2083641f251d22814dbe94613eeb/cryptography-3.3.1-cp36-abi3-win32.whl", hash = "sha256:b4890d5fb9b7a23e3bf8abf5a8a7da8e228f1e97dc96b30b95685df840b6914a", size = 1274097, upload-time = "2020-12-10T02:20:26.518Z" },
+    { url = "https://files.pythonhosted.org/packages/91/b0/a3376ede22b0b16b4250ef7539e9c11a5f1b7db2e1cd332fb5760e8ecedc/cryptography-3.3.1-cp36-abi3-win_amd64.whl", hash = "sha256:0e85aaae861d0485eb5a79d33226dd6248d2a9f133b81532c8f5aae37de10ff7", size = 1513102, upload-time = "2020-12-10T02:20:29.028Z" },
+]
+
+[[package]]
+name = "diskcache"
+version = "5.2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/49/07/079b8b4eb2aba194fca4562c7f014ea45a40130ebff539628c05c52d9050/diskcache-5.2.1.tar.gz", hash = "sha256:1805acd5868ac10ad547208951a1190a0ab7bbff4e70f9a07cde4dbdfaa69f64", size = 48321, upload-time = "2021-01-23T02:55:34.135Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/5e/3deb8f9c83bead2af6f2cda97c4400516488464fede2853875a81e502953/diskcache-5.2.1-py3-none-any.whl", hash = "sha256:6e8137c778fd2752b93c8a8f944e939b3665d645b46774d8537dd3528ac3baa1", size = 44558, upload-time = "2021-01-23T02:55:32.682Z" },
+]
+
+[[package]]
+name = "gmpy2"
+version = "2.1.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/02/a9f4de927fc1677a68b40d966f9ea757b58997cfe06cf305ffa2159979ce/gmpy2-2.1.2.tar.gz", hash = "sha256:da75140bca128ece795895477e53b43773e3748aa90ba6170eae7ca2c74b82d1", size = 258445, upload-time = "2022-01-06T05:52:36.253Z" }
+
+[[package]]
+name = "prompt-toolkit"
+version = "3.0.14"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "wcwidth" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b1/46/4eb242362c43cf033b4ec4d7205612c46c9f904a8984cdfdb64d35476175/prompt_toolkit-3.0.14.tar.gz", hash = "sha256:7e966747c18ececaec785699626b771c1ba8344c8d31759a1915d6b12fad6525", size = 385647, upload-time = "2021-01-24T09:40:07.368Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4e/f4/805f4596bf15ae8e576623f579b40c12b0780a7bdd9a437f205f136d9ece/prompt_toolkit-3.0.14-py3-none-any.whl", hash = "sha256:c96b30925025a7635471dc083ffb6af0cc67482a00611bd81aeaeeeb7e5a5e12", size = 359264, upload-time = "2021-01-24T09:40:04.852Z" },
+]
+
+[[package]]
+name = "pycparser"
+version = "2.20"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/0f/86/e19659527668d70be91d0369aeaa055b4eb396b0f387a4f92293a20035bd/pycparser-2.20.tar.gz", hash = "sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0", size = 161330, upload-time = "2020-03-04T14:16:39.22Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ae/e7/d9c3a176ca4b02024debf82342dab36efadfc5776f9c8db077e8f6e71821/pycparser-2.20-py2.py3-none-any.whl", hash = "sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705", size = 112041, upload-time = "2020-03-04T14:16:37.278Z" },
+]
+
+[[package]]
+name = "pycryptodome"
+version = "3.20.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/ed/19223a0a0186b8a91ebbdd2852865839237a21c74f1fbc4b8d5b62965239/pycryptodome-3.20.0.tar.gz", hash = "sha256:09609209ed7de61c2b560cc5c8c4fbf892f8b15b1faf7e4cbffac97db1fffda7", size = 4794232, upload-time = "2024-01-10T11:30:59.413Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ff/96/b0d494defb3346378086848a8ece5ddfd138a66c4a05e038fca873b2518c/pycryptodome-3.20.0-cp35-abi3-macosx_10_9_universal2.whl", hash = "sha256:ac1c7c0624a862f2e53438a15c9259d1655325fc2ec4392e66dc46cdae24d044", size = 2427142, upload-time = "2024-01-10T11:30:10.711Z" },
+    { url = "https://files.pythonhosted.org/packages/24/80/56a04e2ae622d7f38c1c01aef46a26c6b73a2ad15c9705a8e008b5befb03/pycryptodome-3.20.0-cp35-abi3-macosx_10_9_x86_64.whl", hash = "sha256:76658f0d942051d12a9bd08ca1b6b34fd762a8ee4240984f7c06ddfb55eaf15a", size = 1590045, upload-time = "2024-01-10T11:30:14.431Z" },
+    { url = "https://files.pythonhosted.org/packages/ea/94/82ebfa5c83d980907ceebf79b00909a569d258bdfd9b0264d621fa752cfd/pycryptodome-3.20.0-cp35-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f35d6cee81fa145333137009d9c8ba90951d7d77b67c79cbe5f03c7eb74d8fe2", size = 2061748, upload-time = "2024-01-10T11:30:16.551Z" },
+    { url = "https://files.pythonhosted.org/packages/af/20/5f29ec45462360e7f61e8688af9fe4a0afae057edfabdada662e11bf97e7/pycryptodome-3.20.0-cp35-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:76cb39afede7055127e35a444c1c041d2e8d2f1f9c121ecef573757ba4cd2c3c", size = 2135687, upload-time = "2024-01-10T11:30:18.61Z" },
+    { url = "https://files.pythonhosted.org/packages/e5/1f/6bc4beb4adc07b847e5d3fddbec4522c2c3aa05df9e61b91dc4eff6a4946/pycryptodome-3.20.0-cp35-abi3-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:49a4c4dc60b78ec41d2afa392491d788c2e06edf48580fbfb0dd0f828af49d25", size = 2164262, upload-time = "2024-01-10T11:30:20.99Z" },
+    { url = "https://files.pythonhosted.org/packages/30/4b/cbc67cda0efd55d7ddcc98374c4b9c853022a595ed1d78dd15c961bc7f6e/pycryptodome-3.20.0-cp35-abi3-musllinux_1_1_aarch64.whl", hash = "sha256:fb3b87461fa35afa19c971b0a2b7456a7b1db7b4eba9a8424666104925b78128", size = 2054347, upload-time = "2024-01-10T11:30:23.407Z" },
+    { url = "https://files.pythonhosted.org/packages/0d/08/01987ab75ca789247a88c8b2f0ce374ef7d319e79589e0842e316a272662/pycryptodome-3.20.0-cp35-abi3-musllinux_1_1_i686.whl", hash = "sha256:acc2614e2e5346a4a4eab6e199203034924313626f9620b7b4b38e9ad74b7e0c", size = 2192762, upload-time = "2024-01-10T11:30:25.512Z" },
+    { url = "https://files.pythonhosted.org/packages/b5/bf/798630923b67f4201059c2d690105998f20a6a8fb9b5ab68d221985155b3/pycryptodome-3.20.0-cp35-abi3-musllinux_1_1_x86_64.whl", hash = "sha256:210ba1b647837bfc42dd5a813cdecb5b86193ae11a3f5d972b9a0ae2c7e9e4b4", size = 2155230, upload-time = "2024-01-10T11:30:27.609Z" },
+    { url = "https://files.pythonhosted.org/packages/39/12/5fe7f5b9212dda9f5a26f842a324d6541fe1ca8059602124ff30db1e874b/pycryptodome-3.20.0-cp35-abi3-win32.whl", hash = "sha256:8d6b98d0d83d21fb757a182d52940d028564efe8147baa9ce0f38d057104ae72", size = 1723464, upload-time = "2024-01-10T11:30:30.271Z" },
+    { url = "https://files.pythonhosted.org/packages/1f/90/d131c0eb643290230dfa4108b7c2d135122d88b714ad241d77beb4782a76/pycryptodome-3.20.0-cp35-abi3-win_amd64.whl", hash = "sha256:9b3ae153c89a480a0ec402e23db8d8d84a3833b65fa4b15b81b83be9d637aab9", size = 1759588, upload-time = "2024-01-10T11:30:33.031Z" },
+]
+
+[[package]]
+name = "pyparsing"
+version = "2.4.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1", size = 649718, upload-time = "2020-04-05T22:21:25.349Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8a/bb/488841f56197b13700afd5658fc279a2025a39e22449b7cf29864669b15d/pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b", size = 67842, upload-time = "2020-04-05T22:21:22.897Z" },
+]
+
+[[package]]
+name = "rsa-sign2n"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "asn1tools" },
+    { name = "bitstruct" },
+    { name = "cffi" },
+    { name = "cryptography" },
+    { name = "diskcache" },
+    { name = "gmpy2" },
+    { name = "prompt-toolkit" },
+    { name = "pycparser" },
+    { name = "pycryptodome" },
+    { name = "pyparsing" },
+    { name = "six" },
+    { name = "wcwidth" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "asn1tools", specifier = "==0.155.3" },
+    { name = "bitstruct", specifier = "==8.11.1" },
+    { name = "cffi", specifier = "==1.14.4" },
+    { name = "cryptography", specifier = "==3.3.1" },
+    { name = "diskcache", specifier = "==5.2.1" },
+    { name = "gmpy2", specifier = "==2.1.2" },
+    { name = "prompt-toolkit", specifier = "==3.0.14" },
+    { name = "pycparser", specifier = "==2.20" },
+    { name = "pycryptodome", specifier = "==3.20.0" },
+    { name = "pyparsing", specifier = "==2.4.7" },
+    { name = "six", specifier = "==1.15.0" },
+    { name = "wcwidth", specifier = "==0.2.5" },
+]
+
+[[package]]
+name = "six"
+version = "1.15.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259", size = 33917, upload-time = "2020-05-21T15:25:55.142Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced", size = 10963, upload-time = "2020-05-21T15:25:54.177Z" },
+]
+
+[[package]]
+name = "wcwidth"
+version = "0.2.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83", size = 34755, upload-time = "2020-06-23T16:10:29.829Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/59/7c/e39aca596badaf1b78e8f547c807b04dae603a433d3e7a7e04d67f2ef3e5/wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784", size = 30763, upload-time = "2020-06-23T16:10:28.529Z" },
+]

@@ -3,7 +3,7 @@ name = "rsa-sign2n"
 version = "0.1.0"
 description = "RSA signature forgery tool ported to uv"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "asn1tools==0.155.3",
     "bitstruct==8.11.1",

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 import json
 import base64
@@ -10,6 +11,10 @@ import binascii
 import time
 import hmac
 import hashlib
+
+# ASN files
+file_pkcs1 = './requirements/pkcs1.asn'
+file_x509 = './requirements/x509.asn'
 
 def b64urldecode(b64):
     return base64.urlsafe_b64decode(b64+("="*(len(b64) % 4)))
@@ -85,8 +90,8 @@ padded1 = pkcs1_15._EMSA_PKCS1_V1_5_ENCODE(hash_1, len(jwt0_sig_bytes))
 m0 = bytes2mpz(padded0) 
 m1 = bytes2mpz(padded1)
 
-pkcs1 = asn1tools.compile_files('pkcs1.asn', codec='der')
-x509 = asn1tools.compile_files('x509.asn', codec='der')
+pkcs1 = asn1tools.compile_files(file_pkcs1, codec='der')
+x509 = asn1tools.compile_files(file_x509, codec='der')
 
 jwts=[]
 
@@ -119,9 +124,6 @@ print("Here are your JWT's once again for your copypasting pleasure")
 print("="*80)
 for j in jwts:
     print(j.decode('utf8'))
-
-
-
 
 # Test values:
 # eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJqb2UiLCJleHAiOjEzMDA4MTkzODAsImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.IDcgYnWIJ0my4FurSqfiAAbYBz2BfImT-uSqKKnk-JfncL_Nreo8Phol1KNn9fK0ZmVfcvHL-pUvVUBzI5NrJNCFMiyZWxS7msB2VKl6-jAXr9NqtVjIDyUSr_gpk51xSzHiBPVAnQn8m1Dg3dR0YkP9b5uJ70qpZ37PWOCKYAIfAhinDA77RIP9q4ImwpnJuY3IDuilDKOq9bsb6zWB8USz0PAYReqWierdS4TYAbUFrhuGZ9mPgSLRSQVtibyNTSTQYtfghYkmV9gWyCJUVwMGCM5l1xlylHYiioasBJA1Wr_NAf_sr4G8OVrW1eO01MKhijpaE8pR6DvPYNrTMQ eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJqb2UiLCJleHAiOjEzMDA4MTkzODEsImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.AH-6ZBGA38IjQdBWbc9mPSPwdHGBcNUw1fT-FhhRA-DnX7A7Ecyaip0jt7gOkuvlXfSBXC91DU6FH7rRcnwgs474jgWCAQm6k5hOngOIce_pKQ_Pk1JU_jFKiKzm668htfG06p9caWa-NicxBp42HKB0w9RRBOddnfWk65d9JTI89clgoLxxz7kbuZIyWAh-Cp1h3ckX7XZmknTNqncq4Y2_PSlcTsJ5aoIL7pIgFQ89NkaHImALYI7IOS8nojgCJnJ74un4F6pzt5IQyvFPVXeODPf2UhMEIEyX3GEcK3ryrD_DciJCze3qjtcjR1mBd6zvAGOUtt6XHSY7UHJ3gg

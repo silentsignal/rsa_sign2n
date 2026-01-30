@@ -1,9 +1,12 @@
-FROM ubuntu:20.04
+FROM ghcr.io/astral-sh/uv:python3.11-bookworm-slim
 
-RUN apt update && apt install -y python3.8 python3-pip python3-gmpy2 libgmp-dev libmpfr-dev libmpc-dev && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential libffi-dev libgmp-dev libmpfr-dev libmpc-dev && rm -rf /var/lib/apt/lists/*
+    
 WORKDIR /app
 
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen
 COPY . .
-
-RUN pip3 install -r requirements.txt
+ENV PATH="/app/.venv/bin:$PATH"
+ENTRYPOINT ["/bin/bash"]

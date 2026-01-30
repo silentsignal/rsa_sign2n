@@ -1,0 +1,8 @@
+services:
+  forger:
+    build: .
+    image: sig2n:latest
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true

@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-            python-version: ["3.11"]
+            python-version: ["3.8"]
 
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.11' 
+        python-version: '3.8' 
     - name: Build the Docker image
       run: "cd standalone && docker build . --file Dockerfile --tag rsa_sig2n:latest && cd .."
 

@@ -10,7 +10,7 @@ dependencies = [
     "cffi==1.14.4",
     "cryptography==3.3.1",
     "diskcache==5.2.1",
-    "gmpy2==2.1.2",
+    "gmpy2==2.3.0",
     "prompt-toolkit==3.0.14",
     "pycparser==2.20",
     "pycryptodome==3.20.0",

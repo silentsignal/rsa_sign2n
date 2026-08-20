@@ -5,18 +5,9 @@ description = "RSA signature forgery tool ported to uv"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "asn1tools==0.155.3",
-    "bitstruct==8.11.1",
-    "cffi==1.14.4",
-    "cryptography==3.3.1",
-    "diskcache==5.2.1",
-    "gmpy2==2.3.0",
-    "prompt-toolkit==3.0.14",
-    "pycparser==2.20",
-    "pycryptodome==3.20.0",
-    "pyparsing==2.4.7",
-    "six==1.15.0",
-    "wcwidth==0.2.5",
+    "asn1tools>=0.166",
+    "gmpy2>=2.2",
+    "pycryptodome>=3.20",
 ]
 
 [tool.uv]
